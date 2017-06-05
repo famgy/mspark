@@ -10,10 +10,7 @@ import org.apache.spark.api.java.function.Function;
 
 public class WordCount {
 
-    static SparkConf conf = new SparkConf().setAppName("word count").setMaster("local");
-    static {
-        conf.set("fs.defaultFS", "hdfs://mynamenode:9000");
-    }
+    static SparkConf conf = new SparkConf().setAppName("word count").setMaster("spark://mynamenode:7077");
 
     public static void main(String[] args) {
         String logFile = args[0];
